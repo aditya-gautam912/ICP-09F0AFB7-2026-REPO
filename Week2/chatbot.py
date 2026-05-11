@@ -1,20 +1,25 @@
 import os
-import anthropic
+from groq import Groq
 from dotenv import load_dotenv
 
 # Load API key from .env file
 load_dotenv()
 
-# Initialize the Anthropic client
-client = anthropic.Anthropic(
-    api_key=os.getenv("ANTHROPIC_API_KEY")
+# Initialize the Groq client
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY"),
 )
 
 def chat():
-    print("--- AI Chatbot (Type 'quit' to exit) ---")
+    print("--- AI Chatbot (Groq/Llama3) - Type 'quit' to exit ---")
     
     # Store conversation history
-    messages = []
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a helpful and intelligent AI assistant."
+        }
+    ]
     
     while True:
         user_input = input("You: ")
@@ -27,29 +32,25 @@ def chat():
         messages.append({"role": "user", "content": user_input})
         
         try:
-            # Generate response from Claude
-            response = client.messages.create(
-                model="claude-3-haiku-20240307",
+            # Generate response from Groq using a supported Llama model
+            completion = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=messages,
+                temperature=0.7,
                 max_tokens=1024,
-                messages=messages
+                top_p=1,
+                stream=False,
             )
             
             # Extract and print the response
-            ai_response = response.content[0].text
+            ai_response = completion.choices[0].message.content
             print(f"AI: {ai_response}")
             
             # Add AI response to history
             messages.append({"role": "assistant", "content": ai_response})
             
-        except anthropic.APIConnectionError as e:
-            print("Error: The server could not be reached. Check your internet connection.")
-        except anthropic.RateLimitError as e:
-            print("Error: A 429 status code was received; we should back off a bit.")
-        except anthropic.APIStatusError as e:
-            print(f"Error: Another non-200-range status code was received: {e.status_code}")
-            print(e.response)
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
+            print(f"Error: {e}")
 
 if __name__ == "__main__":
     chat()
