@@ -6,6 +6,6 @@
 
 ## Task Progress
 - [x] Repository initialized with week-wise structure.
-- [ ] Research LLM fundamentals and APIs.
-- [ ] Set up API keys (OpenAI/Claude).
-- [ ] Prepare project selection document.
+- [x] Research LLM fundamentals and APIs.
+- [x] Set up API keys (Claude API identified in environment).
+- [x] Prepare project selection document.
