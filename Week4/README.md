@@ -16,6 +16,12 @@ A Retrieval-Augmented Generation (RAG) system that allows users to upload PDF do
 - **LLM:** Groq (Llama 3)
 - **UI:** Streamlit
 
+## Technical Notes
+- **Architecture Design:** Implemented a classic RAG pipeline: `Document -> Splitting -> Embeddings -> Vector Store -> Retrieval -> LLM`.
+- **Advanced Patterns:** Utilized LangChain's Expression Language (LCEL) for building a modular and readable RAG chain.
+- **Embeddings:** Used `HuggingFaceEmbeddings` with the `all-MiniLM-L6-v2` model for locally-processed semantic vectors.
+- **Storage:** Configured ChromaDB as an in-memory vector database for the development phase.
+
 ## Current Progress
 - [x] Project Initialization
 - [x] Environment Setup

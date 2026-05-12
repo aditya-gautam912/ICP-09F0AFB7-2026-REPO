@@ -9,6 +9,7 @@ This final week is dedicated to consolidating the work done during the Generativ
 - [ ] **Portfolio Integration:** Update the personal portfolio website (`C:\Users\ag950\portfolio`) to include these two major GenAI projects.
 - [ ] **Demo Preparation:** Capture screenshots or record video demos of the working applications.
 - [ ] **Final Internship Report:** Create a comprehensive summary of the learning journey, challenges overcome, and technical achievements.
+- [ ] **MANDATORY Social Media:** Post projects on GitHub and show work on LinkedIn. Tag @InternCareerPath!
 - [ ] **Submission:** Package the repository for final evaluation.
 
 ## Project Summary
