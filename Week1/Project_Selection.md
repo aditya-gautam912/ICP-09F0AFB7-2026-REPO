@@ -7,7 +7,7 @@
 ## Selected Projects
 
 ### Project 1: Intelligent Chatbot with Claude API
-- **Description:** A functional chatbot that maintains conversation history and provides intelligent responses using the Anthropic Claude API.
+- **Description:** A functional chatbot that maintains conversation history and provides intelligent responses using the Groq API.
 - **Key Features:**
   - Context-aware conversations.
   - Custom system prompting.
