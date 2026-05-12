@@ -6,6 +6,11 @@ venv/
 __pycache__/
 *.pyc
 
+# Vector Database
+chroma_db/
+chroma_db_week5/
+*.sqlite3
+
 # IDE files
 .vscode/
 .idea/

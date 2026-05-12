@@ -44,6 +44,9 @@ pip install -r requirements.txt
   python chatbot.py
   ```
 
+## 🖼️ Visual Preview
+![Chatbot UI Screenshot](Screenshot%202026-05-12%20171019.png)
+
 ## 📁 Repository Structure (Week 3)
 - `chatbot.py`: Core CLI implementation.
 - `app.py`: Streamlit-based web implementation.
