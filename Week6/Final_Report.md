@@ -2,19 +2,23 @@
 
 **Intern:** Aditya Gautam
 **Portal ID:** ICP-09F0AFB7-2026
-**Period:** [Start Date] to [End Date]
+**Period:** April 2026 - May 2026
 
 ## Executive Summary
-A summary of the 6-week internship journey and the key technologies explored.
+Over the course of this 6-week internship, I have developed a deep practical understanding of the Generative AI lifecycle. I successfully transitioned from building basic LLM-integrated chatbots to architecting advanced Retrieval-Augmented Generation (RAG) systems. Key technologies mastered include LangChain, ChromaDB, Groq Inference Engine, and sophisticated retrieval strategies like Hybrid Search and Cross-Encoder Re-ranking.
 
 ## Project 1: Intelligent Chatbot (Groq/Llama)
 ### Technical Overview
 - **LLM:** Groq (Llama 3.3 70B)
 - **Stack:** Python, Streamlit
-- **Key Achievements:** [List major milestones]
+- **Key Achievements:**
+    - Developed a low-latency conversational interface using the Groq Inference Engine.
+    - Implemented robust session-state management to maintain chat history.
+    - Designed a clean, user-friendly UI using Streamlit with custom CSS.
 
 ### Challenges & Solutions
-- [Challenge 1]: [Solution]
+- **Challenge:** Maintaining context in long conversations.
+- **Solution:** Implemented a rolling message history buffer passed to the LLM in each turn, ensuring the assistant "remembers" previous user inputs.
 
 ## Project 2: Advanced Multi-Document RAG System
 ### Technical Overview
@@ -24,12 +28,14 @@ A summary of the 6-week internship journey and the key technologies explored.
 - **Stack:** LangChain, Streamlit
 
 ### Key Achievements
-- Implemented multi-document support with source attribution.
-- Integrated advanced re-ranking for higher retrieval precision.
-- Developed a professional, research-oriented UI.
+- **Multi-Doc Support:** Engineered a pipeline to handle multiple PDF uploads with automatic source metadata tagging.
+- **Advanced Retrieval:** Implemented an Ensemble Retriever combining semantic (ChromaDB) and keyword (BM25) search.
+- **Re-ranking:** Integrated a Cross-Encoder model (`ms-marco-MiniLM`) to refine retrieval results, significantly improving answer precision.
+- **Source Explorer:** Developed a UI feature to allow users to inspect the exact context chunks used for each AI response.
 
 ### Challenges & Solutions
-- [Challenge 1]: [Solution]
+- **Challenge:** Handling high-volume PDF processing and vector store locks.
+- **Solution:** Refined the indexing logic to use persistent storage and incremental updates, preventing system crashes during multi-file uploads.
 
 ## Visual Gallery
 
@@ -40,9 +46,10 @@ A summary of the 6-week internship journey and the key technologies explored.
 ![Project 2 Screenshot](../Week5/Screenshot%202026-05-12%20170155.png)
 
 ## Learning Outcomes
-- Deep understanding of RAG pipelines and retrieval optimization.
-- Experience in prompt engineering and system message design.
-- Practical application of hybrid search and re-ranking architectures.
+- Advanced proficiency in the RAG (Retrieval-Augmented Generation) architecture.
+- Practical experience with Vector Databases (ChromaDB) and hybrid search strategies.
+- Mastery of Prompt Engineering and system message optimization for Llama 3 models.
+- Understanding of the importance of metadata in document retrieval and citation.
 
 ## Conclusion
-Final reflections on the internship experience.
+This internship provided a rigorous environment to apply theoretical GenAI concepts to real-world problems. By building functional applications from the ground up, I have gained the confidence and technical skills necessary to contribute to professional AI development teams.
