@@ -12,7 +12,7 @@
   - Context-aware conversations.
   - Custom system prompting.
   - Error handling for API rate limits.
-- **Tools:** Python, Anthropic SDK, Dotenv.
+- **Tools:** Python, Groq SDK, Dotenv.
 
 ### Project 2: Document Q&A System (RAG)
 - **Description:** A Retrieval-Augmented Generation (RAG) system that allows users to upload PDFs and ask questions based on the content.
